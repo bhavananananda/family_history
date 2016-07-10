@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Login>
+	<person>
+		<id>ProfileHolder_2</id>
+		<email>Emma@familyhistory.com</email>
+		<password>emma</password></person>
+	<person>
+		<id>ProfileHolder_1</id>
+		<email>Bert@familyhistory.com</email>
+		<password>bert</password>
+	</person>
+</Login>

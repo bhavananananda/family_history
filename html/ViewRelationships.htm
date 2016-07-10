@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="../css/fh.css" type="text/css" media="screen" />
+<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"></script> 
+<script type="text/javascript" src="../java_script/general.js"></script>
+<script type="text/javascript" src="../java_script/viewrelationships.js"></script>
+
+<title>View Family Relations</title>
+
+</head>
+<body  onload="init()">
+<h1>Family History Site</h1>
+<div>
+<h3> Add Family Relations</h3>
+<div class="regular">
+<div>
+  <span class="left">User: <input id="uname" name="uname" type="text" DISABLED/></span>
+</div>
+</div>
+<div></div>
+	<div>
+
+      <select id="relationship" name="relationship" >
+	  <option value="bloodlineOf">Blood-line of</option>
+	  <option value="ancestorOf">Ancestors of</option>
+	  <option value="descentantOf">Descentant of</option>
+	  <option value="parentOf">Parents of</option>
+	  <option value="parentinlawOf">Parents-in-law of</option>
+	  <option value="fatherOf">Father of</option>
+	  <option value="motherOf">Mother of</option>
+	  <option value="fatherinlawOf">Father-in-law of</option>
+	  <option value="motherinlawOf">Mother-in-law of</option>
+	  <option value="soninlawOf">Son-in-law of</option>
+	  <option value="daughterinlawOf">Daughter-in-law of</option>
+	  <option value="spouseOf">Spouse of</option>
+	  <option value="husbandOf">Husband of</option>
+	  <option value="wifeOf">Wife of</option>
+	  <option value="childOf">Children of</option>
+	  <option value="sonOf">Sons of</option>
+	  <option value="daughterOf">Daughters of</option>
+	  <option value="siblingOf">Siblings of</option>
+	  <option value="sisterOf">Sisters of</option>
+	  <option value="brotherOf">Brothers of</option> 
+	  <option value="grandparentOf">Grandparents of</option>
+	  <option value="grandfatherOf">Grandfathers of</option>
+	  <option value="grandmotherOf">Grandmothers of</option> 
+	  <option value="grandchildOf">Grandchildren of</option>
+	  <option value="grandsonOf">Grandsons of</option>
+	  <option value="granddaughterOf">Granddaughters of</option> 
+	  <option value="auntOf">Aunts of</option>
+	  <option value="uncleOf">Uncles of</option>
+	  <option value="nieceOf">Nieces of</option>
+	  <option value="nephewOf">Nephews of</option>  
+	  <option value="cousinOf">Cousins of</option>  
+	  </select>
+      
+      <select id="relative" name="relative" ></select>
+	</div>
+	
+	<div id="submitt" class="dataFields">
+	<span class="left">
+	<input type="submit" name="nonProfileHolderDataSubmit" value="Submit"  onClick="getRelations()">
+	</span>
+	</div>
+	
+</div>
+
+
+<div>
+<p><a href="javascript:home()">home</a></p>
+</div>
+<div  style="clear:both">
+<p><a href="javascript:logout()">Logout</a></p>
+</div>
+
+</body>
+</html>

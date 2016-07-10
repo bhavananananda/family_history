@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="../css/fh.css" type="text/css" media="screen" />
+<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"></script> 
+<script type="text/javascript" src="../java_script/general.js"></script>
+<script type="text/javascript" src="../java_script/register.js"></script>
+
+<title>Profile Registration</title>
+
+</head>
+<body>
+<h1>Family History Site</h1>
+<div>
+<h3> Profile Registration </h3>
+<div class="regular">
+	<div class="dataFields">
+	<span class="left">First Name:</span>
+	<span class="right"><input id="firstName" name="firstName" type="text" onKeyPress="return isAlphabetKey(event,this)"/></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Middle Name:</span>
+	<span class="right"><input id="middleName" name="middleName" type="text" onKeyPress="return isAlphabetKey(event,this)"/></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Last Name:</span>
+	<span class="right"><input id="lastName" name="lastName" type="text" onKeyPress="return isAlphabetKey(event,this)"/></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Nick Name:</span>
+	<span class="right"><input id="nickName" name="nickName" type="text" onKeyPress="return isAlphabetKey(event,this)" /></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Gender:</span>
+	<span class="right"><select id="gender" name="gender" ><option>Male</option><option>Female</option></select></span></span>
+	</div>
+	<div class="dataFields">Date of Birth:</div>
+	<div class="dataFields">
+		<span class="left">
+			 dd\mm\yyyy <input id="DD" name="date" type="text" size="1" maxlength="2" onKeyPress="return isNumberKey(event)" /> 
+			 \ <input id="MM" name="date" type="text" size="1" maxlength="2" onKeyPress="return isNumberKey(event)"/> 
+			 \ <input id="YY" name="date" type="text" size="1" maxlength="4" onKeyPress="return isNumberKey(event)"/>
+		</span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Email:</span>
+    <span class="right"><input id="email" name="email" type="text"  onKeyPress="return isEmailIDformat(event)"/>@familyhistory.com</span>
+    </div>
+    <div class="dataFields">
+	<span class="left">Password:</span>
+    <span class="right"><input id="password" name="password" type="text"  onKeyPress="return isPasswordformat(event)"/></span>
+    </div>
+	<div class="dataFields">
+	<span class="left">Image:</span>
+	<span class="right"><input id="profileImage" name="profileImage" type="text" onKeyPress="return isAlphabetKey(event,this)" /></span>
+	</div>
+
+	<div class="dataFields">
+	<span class="left">Health:</span>
+	<span class="right">
+	Disease:<input id="disease" name="disease" type="text" onKeyPress="return isAlphabetKey(event,this)" /></span>
+	</span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Heriditary:</span>
+	<span class="right">
+	<select id="heriditary" name="heriditary" >
+	<option>Heart Disease</option>
+	<option>Diabeties</option>
+	<option>Haemophilia</option>
+	<option>Sickle-Cell Disease</option>
+	</select>
+	</span>	
+	</div>
+	<div class="dataFields">
+	<span class="left">Blood Group:</span>
+	<span class="right">
+	<select id="blood" name="blood" >
+	<option>O+</option>
+	<option>O-</option>
+	<option>A+</option>
+	<option>A-</option>
+	<option>B+</option>
+	<option>B-</option>
+	<option>AB+</option>
+	<option>AB-</option>
+	</select>
+	</span>
+	</div>
+	<div class="dataFields">
+		<span class="left">
+			Address:
+			<input id="address" name="address" type="text"  />
+		</span>
+		<span class="right">
+	    	<input  name="addressButton" type="button" value="Get Lat/Long"  onClick="getLatLong()">
+		</span>
+	</div>
+	<div class="dataFields">
+		<span class="left">
+			Latitude: <input id="latitude" name="lat" type="text" onKeyPress="return isFloatingNumberKey(event)" DISABLED/>
+		</span>
+		<span class="right">
+			Longitude: <input id="longitude" name="long" type="text" onKeyPress="return isFloatingNumberKey(event)" DISABLED/>
+		</span>
+	</div>
+	<div class="dataFields"><span class="left">Other notes:</span><span class="right"><input  id="other" name="other" type="text"/></div>
+	
+	<div class="dataFields"><span class="right">
+	<input type="submit" name="profileHolderDataSubmit" value="Submit"  onClick="register()">
+	</span></div>
+	
+</div>
+</div>
+
+<div>
+<p><a href="FamilyHistory.htm">home</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.regular {background-color:white;width:500px;margin:20px;background-color:#E4E4C9;}
+.login {background-color:white;width:400px;background-color:#E4E4C9;}
+
+.left {}
+.right {float:right;}
+.dataFields {padding:10px 10px 10px 10px;background-color:#E4E4C9; }
+input {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px }
+table,th,td {border:1px solid black}
+
+h1 { background-color:#CCCC99;}
+
+.banner { background-color:#CCCC99;}
+
+#logo1 {margin:0px 0px 0px 0px;padding:2px 2px 2px 2px ; background-color:#CCCC99;}
+#logo2 {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px ; background-color:#CCCC99;}
+#logo3 {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px ; background-color:#CCCC99;}
+#logo4 {margin:0px 0px 0px 0px;padding:0px 0px 0px 0px ; background-color:#CCCC99;}
+body {background-color:#E4E4C9;}
+

@@ -1,0 +1,55 @@
+
+<html> 
+  <head> 
+    <title>The Web3 Family History Site</title> 
+    <link rel='stylesheet' href='http://www.simile-widgets.org/styles/common.css' type='text/css' />    
+    <link href="../java_script/exhibitschema.js" type="application/json" rel="exhibit/data" /> 
+    <link href="../java_script/family.js" type="application/json" rel="exhibit/data" /> 
+    <link rel='stylesheet' href='../css/exhibitstyles.css' type='text/css' /> 
+    <script src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js"></script>
+    <script src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/time/time-extension.js"></script>
+	<script src="http://api.simile-widgets.org/exhibit/2.2.0/extensions/map/map-extension.js"></script> 
+  </head> 
+ 
+  <body> 
+    <ul id="path"> 
+      <li><a href="/">SIMILE Widgets</a></li> 
+      <li><a href="/exhibit/">Exhibit</a></li> 
+      <li><span>The Web3 Family History Site</span></li> 
+    </ul> 
+    
+    <div ex:role="collection" ex:itemTypes="FamilyMember"></div> 
+    <table id="frame"> 
+        <tr> 
+            <td id="content"> 
+                <div ex:role="viewPanel"> 
+                    <div class="map-lens" ex:role="lens" style="display: none;"> 
+                        <div><img ex:src-content=".imageURL" /></div> 
+                        Name: <span ex:content=".FirstName"></span> <span ex:content=".MiddleName"></span> <span ex:content=".LastName"></span><br/> 
+                         DOB: <span ex:content=".GivenDOB"></span> <br/> 
+						 <span ex:if=".Living = 'No'"><span>DOD:<span ex:content=".GivenDOD"></span><br/> </span> </span>
+						 Age: <span ex:content=".Age"></span> <br/> 
+					   Place: <span ex:content=".Place"></span><br/> 
+					  Living: <span ex:content=".Living"></span><br/> 
+						
+                    </div> 
+                    <div ex:role="view"
+                        ex:viewClass="Map"
+                        ex:label="Family Members with Photos"
+                        ex:latlng=".birthLatLng"
+                        ex:center="38.479394673276445, -115.361328125"
+                        ex:zoom="3"
+                        ex:bubbleWidth="200"
+                        ex:icon=".imageURL"
+                        ex:shapeWidth="60"
+                        ex:shapeHeight="60"
+                        ex:selectCoordinator="FamilyMember"
+                        > 
+                    </div> 
+                </div> 
+            </td> 
+        </tr> 
+    </table> 
+  </body> 
+</html> 
+

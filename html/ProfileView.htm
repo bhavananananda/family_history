@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="../css/fh.css" type="text/css" media="screen" />
+<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"></script> 
+<script type="text/javascript" src="../java_script/general.js"></script>
+<script type="text/javascript" src="../java_script/profile.js"></script>
+
+<title>Profile View</title>
+
+</head>
+<body onload="init()">
+<h1>Family History Site</h1>
+
+<h3> Your Profile </h3>
+<div class="regular" style="float:left">
+<div>
+  <span class="left">User: <input id="uname" name="uname" type="text" DISABLED/></span>
+ <span class="right"><a href="javascript:disableFields(false)">Edit</a></span>
+</div>
+<div>
+  <span class="left"><image id="imageURL" name="imageURL" src="" DISABLED/></span>
+</div>
+	<div class="dataFields">
+	<span class="left">First Name:</span>
+	<span class="right"><input id="firstName" name="firstName" type="text" onKeyPress="return isAlphabetKey(event,this)" DISABLED/></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Middle Name:</span>
+	<span class="right"><input id="middleName" name="middleName" type="text" onKeyPress="return isAlphabetKey(event,this)" DISABLED/></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Last Name:</span>
+	<span class="right"><input id="lastName" name="lastName" type="text" onKeyPress="return isAlphabetKey(event,this)" DISABLED/></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Nick Name:</span>
+	<span class="right"><input id="nickName" name="nickName" type="text" onKeyPress="return isAlphabetKey(event,this)" DISABLED/></span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Gender:</span>
+	<span class="right"><select id="gender" name="gender" DISABLED><option>Male</option><option>Female</option></select></span></span>
+	</div>
+	<div class="dataFields">Date of Birth:</div>
+	<div class="dataFields">
+		<span class="left">
+			 dd\mm\yyyy <input id="DD" name="date" type="text" size="1" maxlength="2" onKeyPress="return isNumberKey(event)" DISABLED /> 
+			 \ <input id="MM" name="date" type="text" size="1" maxlength="2" onKeyPress="return isNumberKey(event)" DISABLED/> 
+			 \ <input id="YY" name="date" type="text" size="1" maxlength="4" onKeyPress="return isNumberKey(event)" DISABLED/>
+		</span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Email:</span>
+    <span class="right"><input id="email" name="email" type="text"  onKeyPress="return isEmailIDformat(event)" DISABLED/>@familyhistory.com</span>
+    </div>
+    <div class="dataFields">
+	<span class="left">Password:</span>
+    <span class="right"><input id="password" name="password" type="text"  onKeyPress="return isPasswordformat(event)" DISABLED/></span>
+    </div>
+	<div class="dataFields">
+	<span class="left">Image:</span>
+	<span class="right"><input id="profileImage" name="profileImage" type="text" onKeyPress="return isAlphabetKey(event,this)" DISABLED/></span>
+	</div>
+
+	<div class="dataFields">
+	<span class="left">Health:</span>
+	<span class="right">
+	Disease:<input id="disease" name="disease" type="text" onKeyPress="return isAlphabetKey(event,this)" DISABLED/></span>
+	</span>
+	</div>
+	<div class="dataFields">
+	<span class="left">Heriditary:</span>
+	<span class="right">
+	<select id="heriditary" name="heriditary" DISABLED>
+	<option>Heart Disease</option>
+	<option>Diabeties</option>
+	<option>Haemophilia</option>
+	<option>Sickle-Cell Disease</option>
+	</select>
+	</span>	
+	</div>
+	<div class="dataFields">
+	<span class="left">Blood Group:</span>
+	<span class="right">
+	<select id="blood" name="blood" DISABLED>
+	<option>O+</option>
+	<option>O-</option>
+	<option>A+</option>
+	<option>A-</option>
+	<option>B+</option>
+	<option>B-</option>
+	<option>AB+</option>
+	<option>AB-</option>
+	</select>
+	</span>
+	</div>
+	<div class="dataFields">
+		<span class="left">
+			Address:
+			<input id="address" name="address" type="text" DISABLED  />
+		</span>
+		<span class="right">
+	    	<input  id="latlong" name="latlong" type="button" value="Get Lat/Long"  onClick="getLatLong()" DISABLED/>
+		</span>
+	</div>
+	<div class="dataFields">
+		<span class="left">
+			Latitude: <input id="latitude" name="lat" type="text" onKeyPress="return isFloatingNumberKey(event)" DISABLED/>
+		</span>
+		<span class="right">
+			Longitude: <input id="longitude" name="long" type="text" onKeyPress="return isFloatingNumberKey(event)" DISABLED/>
+		</span>
+	</div>
+	<div class="dataFields"><span class="left">Other notes:</span><span class="right"><input  id="other" name="other" type="text" DISABLED/></div>
+	
+	<div class="dataFields"><span class="right">
+	<input type="submit" id="profileHolderDataSubmit" name="profileHolderDataSubmit" value="Submit"  onClick="editProfile()" DISABLED>
+	</span>
+	</div>
+	
+</div>
+
+<div style="margin:20px">
+<div>
+<span><a href="javascript:getExhibitMap()">View Family Location Exhibit Map</a></span>
+</div> 
+<div>
+<span><a href="javascript:getTimeline()">View Family Timeline Graph</a></span>
+</div>
+<div> 
+<span><a href="javascript:viewFamilyMemberProfile()">Family Member Profiles</a></span>
+</div> 
+<div> 
+<span><a href="javascript:viewNonFamilyMemberProfile()">Other Member Profiles</a></span>
+</div> 
+<div> 
+<span><a href="javascript:addFamilyMember()">Add a Family Member</a></span>
+</div> 
+<div> 
+<span><a href="javascript:addRelationships()">Add Relationships</a></span>
+</div> 
+<div> 
+<span><a href="javascript:viewRelationships()()">View Relationships</a></span>
+</div> 
+<div> 
+<span><a href="javascript:viewHealthDetails()">Health Details</a></span>
+</div> 
+</div> 
+
+<div  style="clear:both">
+<p><a href="javascript:logout()">Logout</a></p>
+</div>
+
+
+
+</body>
+</html>
