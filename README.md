@@ -1,10 +1,4 @@
 
-Eclipse project folder:-
-FamilyHistory is the eclipse project folder.
-This can be imported into the eclipse workspace.
-This project was developed in Eclipse Galileo.
-
-
 To run the webservce:- 
 Simply Run the FamilyHistoryService.java
 (The web service takes about a couple of minutes to load fully as it loads the ontology, runs the SWRL rules and does post reasoning.)
