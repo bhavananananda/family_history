@@ -1,5 +1,5 @@
 
-To run the webserivce:- 
+To run the webservice:- 
 Simply Run the FamilyHistoryService.java
 (The web service takes about a couple of minutes to load fully as it loads the ontology, runs the SWRL rules and does post reasoning.)
 
