@@ -12,8 +12,6 @@ Test login name: Bert
 
 Ontology file:-
 The ontology gets loaded from the Web3FamilyTree.owl file
-(located in MSc Research Project\FamilyHistory\familyHistoryService\Web3FamilyTree.owl)
-
 
 JARS to be included in the project build path:-
 saxon9he.jar
